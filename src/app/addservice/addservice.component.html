@@ -1,0 +1,66 @@
+<mat-toolbar class="toolbar">
+    <span class="container app-name">Bike Service</span>
+    
+  </mat-toolbar>
+
+  <div class="container">
+    <div class="add-service-content">
+      <div class="available-service">
+        <h2>Available Service</h2>
+        <table class="table table-striped" responsive>
+          <thead>
+            <tr>
+              <th scope="col">Service Type</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let service of newservice; index as i">
+              
+              <td>
+                {{ service.service }}
+              </td>
+              <td><button mat-raised-button color="accent" (click)="onEdit(service)">Edit</button></td>
+              <td><button mat-raised-button color="warn" (click)="onDelete(service.serviceid)">Delete</button></td>
+              
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="add-form">
+        <h2>Add Service</h2>
+        <div>
+          <form 
+        class="form"
+        #f="ngForm"
+        novalidate
+        (ngSubmit)="f.form.valid&&addservice()">
+            
+            <div class="example-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label for="add">New Service</mat-label>
+                    <input matInput placeholder="Enter Service" value=""
+                    type="text" name="service" [(ngModel)]="newservice.addedservice" #name="ngModel" required
+                    >
+                  </mat-form-field>
+                <span
+                class="text-danger"
+                *ngIf="this.submit && name.errors?.['required']"
+                >
+                Service Name is Required
+                </span>
+            </div>
+            
+            <br>
+        <div class="button">
+            <button mat-raised-button color="primary"
+            type="submit" (click)="this.submit=true"
+            >Add</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>

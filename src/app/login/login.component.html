@@ -1,0 +1,51 @@
+<div class="login-form mb-3">
+    <div class="heading">
+        <h2>Login</h2>
+    </div>
+    <form 
+    class="form"
+    #f="ngForm"
+    novalidate
+    (ngSubmit)="f.form.valid&&loginuser()">
+        <div class="example-form">
+            <mat-form-field class="example-full-width">
+                <mat-label for="email">Email</mat-label>
+                <input matInput placeholder="Enter Email" value=""
+                 type="email" name="email" [(ngModel)]="login.email" #name="ngModel" required
+                >
+              </mat-form-field>
+            <span
+            class="text-danger"
+            *ngIf="this.submit && name.errors?.['required']"
+            >
+                Email is Required
+            </span>
+        </div>
+        <div class="example-form">
+            <mat-form-field class="example-full-width">
+                <mat-label for="password">Password</mat-label>
+                <input matInput placeholder="Enter Password" value=""
+                type="password" name="password" [(ngModel)]="login.password" #name="ngModel" required
+                >
+              </mat-form-field>
+            <span
+            class="text-danger"
+            *ngIf="this.submit && name.errors?.['required']"
+            >
+            Password is Required
+            </span>
+        </div>
+        
+        <br>
+    
+        <button mat-raised-button color="primary"
+        type="submit" (click)="this.submit=true"
+        >Login</button>
+
+    <div class="link-tag">
+        <p>Don't have an account?<a href="javascript:void(0)" routerLink="/" class="link">Register</a></p>
+    </div>
+    </form>
+    
+     
+</div>

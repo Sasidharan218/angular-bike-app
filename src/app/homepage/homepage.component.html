@@ -1,0 +1,124 @@
+<div class="home-page">
+    <mat-toolbar>
+        <span class="container app-name">Bike Service</span>
+        <span class="example-spacer"></span>
+        <button mat-button class="status-button" routerLink="/usertable">View Status</button>
+    </mat-toolbar>
+    <div class="home-content">
+        <div class="heading">
+            <h1 class="heading-1">Hello <br> Welcome<br><span> Bike service center</span></h1>
+        </div>
+        <p class="content-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+    <div class="container">
+        <div class="service-content ">
+        <div class="images">
+            <img src="https://cdn.iconscout.com/icon/free/png-512/free-tools-196-460714.png?f=avif&w=256" alt="service" class="image">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="images">
+            <img src="https://cdn.iconscout.com/icon/free/png-512/free-mechanic-2662171-2213021.png?f=avif&w=256" alt="service" class="image">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="images">
+            <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/car-washing-1577554-1339842.png?f=avif&w=256" class="image">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+    </div>
+    <div class="service-content">
+        <div class="service-list">
+            <h2 class="service-content-heading">Services</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+            <mat-list>
+                <mat-list-item class="list-item">
+                    <mat-icon matListItemIcon class="icon">build_circle</mat-icon>
+                    <div class="service-name" matListItemTitle>Service 1</div>
+                </mat-list-item>
+                <mat-list-item class="list-item">
+                    <mat-icon matListItemIcon>build_circle</mat-icon>
+                    <div class="service-name" matListItemTitle>Service 2</div>
+                </mat-list-item>
+            </mat-list>
+        </div>
+        <div class="service-image">
+            <img src="https://static.gobumpr.com/web-app/features/trusted-mechanics.svg" alt="service">
+        </div>
+    </div>
+    </div>
+    <div class="quality container">
+        <h2>Delivery</h2>
+        <div class="quality-image">
+            <div class="quality-image-1">
+                <img src="https://www.apnamechanic.com/wp-content/uploads/2022/09/road-side-assistance.png.webp" alt="1">
+                <p>Lorem Ipsum is simply</p>
+            </div>
+            <div class="quality-image-2">
+                <img src="https://cdn.iconscout.com/icon/premium/png-64-thumb/delivery-list-2495997-2089764.png?f=avif" alt="2">
+                <p>Lorem Ipsum is simply</p>
+            </div>
+        </div>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+    <div class="container ">
+        <h2 class="booking-heading">Booking</h2>
+        <div class="booking">
+        <div class="booking-image">
+            <img src="https://cdn-icons-png.flaticon.com/128/2880/2880841.png" alt="img">
+        </div>
+        <div class="booking-form">
+            <form 
+                class="form"
+                #f="ngForm"
+                novalidate
+                (ngSubmit)="f.form.valid && onBooking()"
+                >
+                <div class="example-form">
+                    <mat-form-field class="example-full-width">
+                        <mat-label for="service-type">Service Type</mat-label>
+                        <input matInput placeholder="Enter Service Type" value=""
+                        type="text" name="service" [(ngModel)]="newbooking.service" #name="ngModel" required
+                        >
+                    </mat-form-field><br>
+                    <span
+                    class="text-danger"
+                    *ngIf="this.submit && name.errors?.['required']"
+                    >
+                        Service Type is Required
+                    </span>
+                </div>
+                <div class="example-form">
+                    <mat-form-field class="example-full-width">
+                        <mat-label for="bike">Bike</mat-label>
+                        <input matInput placeholder="Enter Bike Model" value=""
+                        type="text" name="bike" [(ngModel)]="newbooking.bike" #name="ngModel" required
+                        >
+                    </mat-form-field><br>
+                    <span
+                    class="text-danger"
+                    *ngIf="this.submit && name.errors?.['required']"
+                    >
+                    Bike Model is Required
+                    </span>
+                </div>
+                    
+                    <div class="example-form">
+                        <mat-form-field class="example-full-width">
+                            <mat-label for="date">Date</mat-label>
+                            <input matInput placeholder="Enter Date" value=""
+                            type="date" name="date" [(ngModel)]="newbooking.date" #name="ngModel" required
+                            >
+                        </mat-form-field><br>
+                        <span
+                        class="text-danger"
+                        *ngIf="this.submit && name.errors?.['required']"
+                        >
+                        Date is Required
+                        </span>
+                    </div>
+                    <br>
+                    <button mat-raised-button color="primary" type="submit" (click)="this.submit=true">Book</button>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>

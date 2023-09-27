@@ -1,0 +1,33 @@
+
+<div>
+    <mat-toolbar class="toolbar">
+      <span class="container app-name">Bike Service</span>
+      
+    </mat-toolbar>
+    <div class="container">
+    <table class="table table-striped" responsive>
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Service Type</th>
+                <th scope="col">Bike Model</th>
+                <th scope="col">Status</th>
+                <th scope="col">Date</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let service of services; index as i">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>
+                    {{ service.service }}
+                </td>
+                <td>{{ service.bike }}</td>
+                <td>{{ service.status }}</td>
+                  <td>{{ service.date }}</td>
+          
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
