@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { Booking } from '../user.model';
 
-interface allservice {
+/* interface allservice {
 	service: string;
 	bike: string;
 	status: string; 
@@ -22,6 +23,10 @@ const SERVICES: allservice[] = [
 	},
 	
 ];
+ */
+
+   
+
 
 @Component({
   selector: 'app-usertable',
@@ -29,5 +34,7 @@ const SERVICES: allservice[] = [
   styleUrls: ['./usertable.component.css']
 })
 export class UsertableComponent {
-  services = SERVICES;
+	booked : Booking[] = []
+
+	constructor(){}
 }

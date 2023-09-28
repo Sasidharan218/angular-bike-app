@@ -11,5 +11,5 @@ export interface User {
 
  export interface availableservice {
     serviceid:number,
-    service: string;
+    addedservice: string;
   }

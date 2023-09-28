@@ -11,6 +11,7 @@ export class HomepageComponent {
     bike: String = '';
     date: Date | null = null; */
 
+    booking : any[] = []
 
      newbooking: any = {
         bike:'',
@@ -18,10 +19,15 @@ export class HomepageComponent {
         servicetype:''
      }
 
-    private booking : Booking[] = []
+     
     submit: boolean = false;
 
+    constructor(){}
+
+    ngOnInit():void{}
+
     onBooking(){
+      debugger
       console.log(this.newbooking.servicetype,this.newbooking.bike,this.newbooking.date)
       this.booking.push(this.newbooking)
       localStorage.setItem('userbooking',JSON.stringify(this.newbooking))
@@ -30,6 +36,6 @@ export class HomepageComponent {
         date:'',
         servicetype:''
      }
-
+    
     }
 }

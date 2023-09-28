@@ -26,7 +26,7 @@ import { availableservice } from '../user.model';
   styleUrls: ['./addservice.component.css']
 })
 export class AddserviceComponent {
-  private services: availableservice[] = [];
+   services: availableservice[] = [];
 
   newservice:any = {
     serviceid:0,

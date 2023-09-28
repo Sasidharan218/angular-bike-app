@@ -5,9 +5,7 @@
   
 </mat-toolbar>
 <div class="container">
-	<div class="button">
-		<button mat-raised-button color="primary">Pendings</button>
-	</div>
+	
 <table class="table table-striped" responsive>
 	<thead>
 		<tr>
@@ -20,14 +18,13 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let service of services; index as i">
+		<tr *ngFor="let data of adminbooking; index as i">
 			<th scope="row">{{ i + 1 }}</th>
 			<td>
-				{{ service.service }}
+				{{ data.servicetype }}
 			</td>
-			<td>{{ service.bike }}</td>
-			<td>{{ service.status }}</td>
-      		<td>{{ service.date }}</td>
+			<td>{{ data.bike }}</td>
+      		<td>{{ data.date }}</td>
       
 		</tr>
 	</tbody>

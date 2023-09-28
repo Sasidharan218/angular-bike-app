@@ -16,10 +16,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let service of newservice; index as i">
+            <tr *ngFor="let service of services; index as i">
               
               <td>
-                {{ service.service }}
+                {{ service.addedservice }}
               </td>
               <td><button mat-raised-button color="accent" (click)="onEdit(service)">Edit</button></td>
               <td><button mat-raised-button color="warn" (click)="onDelete(service.serviceid)">Delete</button></td>

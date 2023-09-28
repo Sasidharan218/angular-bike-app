@@ -25,6 +25,7 @@ export class RegisterComponent {
     constructor(){}
 
     userRegister():void{
+      debugger
       this.users.push(this.register);
       localStorage.setItem('users', JSON.stringify(this.users));
       this.register = {

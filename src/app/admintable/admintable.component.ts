@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import { Booking } from '../user.model';
 
-
-interface allservice {
+/* interface allservice {
 	service: string;
 	bike: string;
 	status: string; 
@@ -29,12 +29,12 @@ const SERVICES: allservice[] = [
 	},
 	
 ];
-@Component({
+ */@Component({
   selector: 'app-admintable',
   templateUrl: './admintable.component.html',
   styleUrls: ['./admintable.component.css']
 })
 export class AdmintableComponent{
-  services = SERVICES;
-  
+
+	adminbooking: Booking[] = [];
 }

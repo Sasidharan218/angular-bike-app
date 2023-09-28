@@ -17,14 +17,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let service of services; index as i">
+            <tr *ngFor="let data of booked; index as i">
                 <th scope="row">{{ i + 1 }}</th>
                 <td>
-                    {{ service.service }}
+                    {{ data.servicetype }}
                 </td>
-                <td>{{ service.bike }}</td>
-                <td>{{ service.status }}</td>
-                  <td>{{ service.date }}</td>
+                <td>{{ data.bike }}</td>
+                  <td>{{ data.date }}</td>
           
             </tr>
         </tbody>
