@@ -1,6 +1,6 @@
 <mat-toolbar class="toolbar">
     <span class="container app-name">Bike Service</span>
-    
+    <button mat-button  routerLink="/dashboard"><lucide-icon name="home" [size]="20" [strokeWidth]="2"></lucide-icon></button>
   </mat-toolbar>
 
   <div class="container">
@@ -57,7 +57,12 @@
         <div class="button">
             <button mat-raised-button color="primary"
             type="submit" (click)="this.submit=true"
+            *ngIf="newservice.serviceid == 0"
             >Add</button>
+            <button mat-raised-button color="primary"
+            type="submit" (click)="this.submit=true"
+            *ngIf="newservice.serviceid !== 0"
+            >Update</button>
           </div>
         </form>
         </div>

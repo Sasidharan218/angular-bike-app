@@ -2,7 +2,8 @@
 <div>
     <mat-toolbar class="toolbar">
       <span class="container app-name">Bike Service</span>
-      
+      <span class="example-spacer"></span>
+      <button mat-button  routerLink="/home"><lucide-icon name="home" [size]="20" [strokeWidth]="2"></lucide-icon></button>
     </mat-toolbar>
     <div class="container">
     <table class="table table-striped" responsive>
@@ -23,6 +24,7 @@
                     {{ data.servicetype }}
                 </td>
                 <td>{{ data.bike }}</td>
+                <td>{{data.status}}</td>
                   <td>{{ data.date }}</td>
           
             </tr>

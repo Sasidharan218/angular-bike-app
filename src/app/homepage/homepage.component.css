@@ -1,5 +1,5 @@
 .home-page{
-    background-color: #1d1d1f;
+    background-color: #b1cbce;
     height: auto;
 }
 
@@ -13,11 +13,11 @@
     font-size: 15px;
     border: 1px solid;
     border-radius: 25px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .heading h1{
-    color: #cfc3b8;
+    color: #363534;
     font-size: 3rem;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
@@ -39,13 +39,13 @@
 }
 
 .content-head{
-    color: #e8bcb9;
+    color: #3a3838;
     font-size: 1.5rem;
     padding: 15px 0;
 }
 
 .content-1{
-    color: #e8bcb9;
+    color: #424040;
     font-size: 1rem;
     text-indent: 30px;
     line-height: 1.8;
@@ -67,7 +67,7 @@
 }
 
 .images p{
-    color: #ffbc7d;
+    color: #d1b350;
     text-align: center;
     margin: 5% 0 5% 0;
     padding: 10px;
@@ -81,14 +81,14 @@
 }
 
 .service-content-heading{
-    color: #ffbc7d;
+    color: #d1b350;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3rem;
     padding: 20px 0;
 }
 
 .service-content p{
-    color: #e8bcb9;
+    color: #3f3d3c;
     padding: 5px 0;
     font-family: 'Manrope', sans-serif;
 }
@@ -139,14 +139,14 @@
 
 .quality h2{
     margin: 30px 20px;
-    color: #ffbc7d;
+    color: #d1b350;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3rem;
     text-align: center;
 }
 
 .quality p{
-    color: #e8bcb9;
+    color: #2e2c2c;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     line-height: 2;
@@ -168,7 +168,7 @@
 
 .booking-heading{
     margin: 30px 0;
-    color: #ffbc7d;
+    color: #d1b350;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3rem;
     text-align: center;

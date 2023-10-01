@@ -5,8 +5,9 @@ export interface User {
   }
   export interface Booking {
     bike: string;
-    date: Date;
+    date: string;
     servicetype: string;
+    status: string;
   }
 
  export interface availableservice {

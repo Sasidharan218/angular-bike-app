@@ -2,7 +2,7 @@
 <div class="home-page">
 <mat-toolbar class="toolbar">
   <span class="container app-name">Bike Service</span>
-  
+  <button mat-button  routerLink="/dashboard"><lucide-icon name="home" [size]="20" [strokeWidth]="2"></lucide-icon></button>
 </mat-toolbar>
 <div class="container">
 	
@@ -18,12 +18,13 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let data of adminbooking; index as i">
+		<tr *ngFor="let data of newbooking; index as i">
 			<th scope="row">{{ i + 1 }}</th>
 			<td>
 				{{ data.servicetype }}
 			</td>
 			<td>{{ data.bike }}</td>
+			<td>{{data.status}}</td>
       		<td>{{ data.date }}</td>
       
 		</tr>

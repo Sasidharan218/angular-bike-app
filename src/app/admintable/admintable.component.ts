@@ -36,5 +36,16 @@ const SERVICES: allservice[] = [
 })
 export class AdmintableComponent{
 
-	adminbooking: Booking[] = [];
+	newbooking: Booking[] = [];
+	
+	ngOnInit(): void {
+		const localdata = localStorage.getItem('userbooking')
+		if(localdata != null){
+		  this.newbooking = JSON.parse(localdata)
+		}
+	  }
+
+
+	  constructor(){}
+
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Booking } from '../user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -11,31 +12,35 @@ export class HomepageComponent {
     bike: String = '';
     date: Date | null = null; */
 
-    booking : any[] = []
+    booking : Booking[] = []
 
      newbooking: any = {
         bike:'',
         date:'',
-        servicetype:''
+        servicetype:'',
+        status:'pending'
      }
 
      
     submit: boolean = false;
 
-    constructor(){}
+    constructor(private router : Router){}
 
     ngOnInit():void{}
 
+    
+
     onBooking(){
-      debugger
+      
       console.log(this.newbooking.servicetype,this.newbooking.bike,this.newbooking.date)
       this.booking.push(this.newbooking)
-      localStorage.setItem('userbooking',JSON.stringify(this.newbooking))
+      localStorage.setItem('userbooking',JSON.stringify(this.booking))
       this.newbooking= {
         bike:'',
         date:'',
-        servicetype:''
+        servicetype:'',
+        status:'pending'
      }
-    
+     this.router.navigate(['/usertable']);
     }
 }

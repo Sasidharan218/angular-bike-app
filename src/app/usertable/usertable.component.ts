@@ -34,7 +34,33 @@ const SERVICES: allservice[] = [
   styleUrls: ['./usertable.component.css']
 })
 export class UsertableComponent {
-	booked : Booking[] = []
+	booked: Booking[] = []
 
-	constructor(){}
+	ngOnInit(): void {
+		const localdata = localStorage.getItem('userbooking')
+		if(localdata != null){
+		  this.booked = JSON.parse(localdata)
+		}
+	  }
+
+
+	  constructor(){}
+	/* constructor() {
+		console.log("userTable ::", localStorage.getItem("userbooking"));
+        console.log(this.booked)
+		this.booked = [
+			{
+				"servicetype": 'Water Wash',
+				"bike": 'Ktm',
+				"status": 'pending',
+				"date": '12-12-12',
+			},
+			{
+				"servicetype": 'Oil change',
+				"bike": 'Royal Enfield',
+				"status": 'pending',
+				"date": '12-12-12',
+			},
+		]
+	} */
 }

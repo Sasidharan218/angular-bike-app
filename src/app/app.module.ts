@@ -20,7 +20,7 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatTableModule} from '@angular/material/table';
 import {MatSidenavModule} from '@angular/material/sidenav'
-import { LucideAngularModule, File, Home, Menu, UserCheck } from 'lucide-angular';
+import { LucideAngularModule, Home, LogOut } from 'lucide-angular';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
@@ -31,6 +31,7 @@ import { UsertableComponent } from './usertable/usertable.component';
 import { AddserviceComponent } from './addservice/addservice.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 const routes:Routes = [
@@ -72,13 +73,14 @@ const routes:Routes = [
     NgbNavModule,
     MatTableModule,
     MatSidenavModule,
-    LucideAngularModule.pick({ Home, Menu}),
+    LucideAngularModule.pick({ Home, LogOut}),
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
     MatPaginatorModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

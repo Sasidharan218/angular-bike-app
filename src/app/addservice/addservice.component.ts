@@ -58,6 +58,8 @@ export class AddserviceComponent {
 
   onEdit(stud: any){
     this.newservice = stud
+    
+    
   }
 
   onDelete(id: number){
@@ -68,4 +70,5 @@ export class AddserviceComponent {
     }
     localStorage.setItem('services', JSON.stringify(this.services))
   }
+
 }
