@@ -33,6 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MatSelectModule } from '@angular/material/select';
 
+import {YouTubePlayerModule} from '@angular/youtube-player';
+
 
 const routes:Routes = [
   {path:'', component:RegisterComponent},
@@ -80,7 +82,8 @@ const routes:Routes = [
     MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
-    MatSelectModule
+    MatSelectModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

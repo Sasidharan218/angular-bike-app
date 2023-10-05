@@ -1,18 +1,39 @@
 .home-page{
-    background-color: #b1cbce;
+    background-color: #ffffffd6;
     height: auto;
 }
 
-.app-name{
-    font-weight: 600;
+.app-name>img{
+    height: 50px;
+}
+ngb-carousel .wrapper {
+    position: relative;
+    height: 0;
+    padding-top: 35%;
+  }
+
+.wrapper>img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.username{
+    font-weight: 650;
+    margin-top: 10px;
+    margin-right: 30px;
+    font-size: 16px;
+    padding: 20px;
 }
 
 .status-button{
-    font-weight: 300;
+    font-weight: 650;
     margin-right: 30px;
-    font-size: 15px;
-    border: 1px solid;
-    border-radius: 25px;
+    font-size: 13px;
     padding: 20px;
 }
 
@@ -34,7 +55,7 @@
 
 .home-content{
     max-width: 50%;
-    margin: 5% 0 0 10%;
+    margin: 0% 0 0 10%;
     padding: 20px;
 }
 
@@ -63,12 +84,23 @@
     border-radius: 20px;
     display: flex;
     padding: 10px;
+    margin-right: 2px;
+    transition: transform 0.3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.images p{
-    color: #d1b350;
+.images:hover {
+    transform: scale(1.05);
+}
+
+
+.images h3{
+    color: #b1922e;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 750;
     margin: 5% 0 5% 0;
     padding: 10px;
     font-family: 'Manrope', sans-serif;
@@ -90,6 +122,7 @@
 .service-content p{
     color: #3f3d3c;
     padding: 5px 0;
+    font-size: 17px;
     font-family: 'Manrope', sans-serif;
 }
 
@@ -137,6 +170,16 @@
     height: 8rem;
 }
 
+.quality-image-3 img{
+    width: 12rem;
+    height: 8rem;
+}
+
+.quality-image-5 img{
+    width: 12rem;
+    height: 8rem;
+}
+
 .quality h2{
     margin: 30px 20px;
     color: #d1b350;
@@ -151,6 +194,16 @@
     font-family: 'Josefin Sans', sans-serif;
     line-height: 2;
     padding: 20px;
+}
+
+
+.quality h3{
+    color: #2e2c2c;
+    text-align: center;
+    font-weight: 750;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 2;
+    padding: 20px 0 0 0;
 }
 
 .booking{
@@ -168,7 +221,7 @@
 
 .booking-heading{
     margin: 30px 0;
-    color: #d1b350;
+    color: #b89c40;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3rem;
     text-align: center;
@@ -181,10 +234,18 @@
 }
 
 .example-form {
-    min-width: 150px;
-    max-width: 500px;
+    min-width: 250px;
+    max-width: 750px;
     width: 100%;
     padding: 10px 0;
+}
+
+
+.about{
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 2;
+    text-indent: 60px;
+    text-align: center;
 }
 
 .form{
@@ -193,3 +254,21 @@
     justify-content: center;
     align-items: center;
 }
+
+.form button{
+    width: 8rem;
+    border-radius: 20px;
+}
+
+.banner{
+    height: 50vh;
+    background-image: url(https://marutisuzukiarenaprodcdn.azureedge.net/-/media/images/maruti/marutisuzuki/arena-services/banner-image/1366x500-mss-commercial.jpg);
+}
+
+.banner-2{
+    height: 37vh;
+    background-image: url(https://marutisuzukiarenaprodcdn.azureedge.net/-/media/ccp/banner2.jpg);
+    background-size: cover;
+}
+
+

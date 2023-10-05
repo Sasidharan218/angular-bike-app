@@ -1,44 +1,75 @@
 <div class="home-page">
     <mat-toolbar>
-        <span class="container app-name">Admin Page</span>
+        <span class="container app-name"><img src="https://api.logo.com/api/v2/images?logo=logo_037131ad-d78d-4041-b946-f76feeb64b4c&u=2023-10-04T18%3A12%3A26.123Z&margins=0&format=webp&quality=30&width=200&height=200&background=transparent&fit=contain" alt="logo"></span>
         <span class="example-spacer"></span>
-        <button mat-button class="status-button" routerLink="/admintable">View Bookings</button>
+        <button mat-button class="status-button" routerLink="/admintable">Booking Details</button>
         <button mat-button  routerLink="/login"><lucide-icon name="log-out" [size]="20" [strokeWidth]="1"></lucide-icon></button>
     </mat-toolbar>
+    <div class="container-fluid">
+    
+        <ngb-carousel >
+          <ng-template ngbSlide>
+            <div class="wrapper">
+              <img src="https://www.bmw.in/content/dam/bmw/marketIN/bmw_in/Topics/owners/warranty-policy/Services-and-repair_03.jpg/jcr:content/renditions/cq5dam.resized.img.1680.large.time1658731455610.jpg" alt="Random first slide">
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="wrapper">
+              <img src="https://marutisuzukiarenaprodcdn.azureedge.net/-/media/images/maruti/marutisuzuki/arena-services/banner-image/ms-service-web-banner_1366x400_02.png" alt="Random second slide">
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="wrapper">
+              <img src="https://marutisuzukiarenaprodcdn.azureedge.net/-/media/images/maruti/marutisuzuki/arena-services/banner-image/ms-service-web-banner_servicebook_1366x400.png"  alt="Random third slide">
+            </div>
+          </ng-template>
+        </ngb-carousel>
+        </div>
     <div class="home-content">
         <div class="heading">
-            <h1 class="heading-1">Hello <br> Admin<br><span> Bike service center</span></h1>
+            <h1 class="heading-1"><span> Bike service center</span></h1>
         </div>
-        <p class="content-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p class="content-1">We're passionate about keeping your ride in top shape. Whether you're a casual rider or a dedicated cyclist, our team of experts is here to provide you with top-notch bike servicing and maintenance solutions.</p>
     </div>
     <div class="container">
         <div class="service-content ">
         <div class="images">
             <img src="https://cdn.iconscout.com/icon/free/png-512/free-tools-196-460714.png?f=avif&w=256" alt="service" class="image">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <h3>Emergency Repairs</h3>
         </div>
         <div class="images">
             <img src="https://cdn.iconscout.com/icon/free/png-512/free-mechanic-2662171-2213021.png?f=avif&w=256" alt="service" class="image">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <h3>Expert Technicians</h3>
         </div>
         <div class="images">
             <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/car-washing-1577554-1339842.png?f=avif&w=256" class="image">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <h3>Basic Tune-Up</h3>
         </div>
     </div>
     <div class="service-content">
         <div class="service-list">
             <h2 class="service-content-heading">Services</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+            <p>Discover a wide range of services designed to cater to your needs</p>
+            
             <mat-list>
+                <marquee direction="up" height="150px">
                 <mat-list-item class="list-item">
                     <mat-icon matListItemIcon class="icon">build_circle</mat-icon>
-                    <div class="service-name" matListItemTitle>Service 1</div>
+                    <div class="service-name" matListItemTitle>Oil Change</div>
                 </mat-list-item>
                 <mat-list-item class="list-item">
                     <mat-icon matListItemIcon>build_circle</mat-icon>
-                    <div class="service-name" matListItemTitle>Service 2</div>
+                    <div class="service-name" matListItemTitle>General check-up</div>
                 </mat-list-item>
+                <mat-list-item class="list-item">
+                    <mat-icon matListItemIcon>build_circle</mat-icon>
+                    <div class="service-name" matListItemTitle>Water wash</div>
+                </mat-list-item>
+                <mat-list-item class="list-item" *ngFor="let service of services">
+                    <mat-icon matListItemIcon>build_circle</mat-icon>
+                    <div class="service-name" matListItemTitle>{{service.addedservice}}</div>
+                </mat-list-item>
+            </marquee>
             </mat-list>
         </div>
         <div class="service-image">
@@ -46,33 +77,71 @@
         </div>
     </div>
     </div>
+   
     <div class="quality container">
-        <h2>Delivery</h2>
+        <h2>Value Added Services</h2>
         <div class="quality-image">
             <div class="quality-image-1">
                 <img src="https://www.apnamechanic.com/wp-content/uploads/2022/09/road-side-assistance.png.webp" alt="1">
-                <p>Lorem Ipsum is simply</p>
+                <h3>Road Side Assistance</h3>
             </div>
             <div class="quality-image-2">
                 <img src="https://cdn.iconscout.com/icon/premium/png-64-thumb/delivery-list-2495997-2089764.png?f=avif" alt="2">
-                <p>Lorem Ipsum is simply</p>
+                <h3>Expert Advice</h3>
+            </div>
+            <div class="quality-image-3">
+                <img src="https://www.hondacarindia.com/_next/image?url=%2Fassets%2Fimages%2Fadvantage-service-Desktopimg1.png&w=1920&q=75" alt="3">
+                <h3>Tyre and Battery cater</h3>
+            </div>
+            <div class="quality-image-3">
+                <img src="https://www.hondacarindia.com/_next/image?url=%2Fassets%2Fimages%2Fadvantage-service-Desktopimg3.png&w=1920&q=75" alt="2">
+                <h3>Regular Battery Check-up</h3>
+            </div>
+            <div class="quality-image-3">
+                <img src="https://www.hondacarindia.com/_next/image?url=%2Fassets%2Fimages%2Fadvantage-service-Desktopimg2.png&w=1920&q=75" alt="2">
+                <h3>Good Guidance</h3>
             </div>
         </div>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p>Benefit from bike, car fittings and maintenance classes to elevate your cycling journey with us.</p>
+    </div>
+    <div class="banner">
+        
+    </div>
+    <div class="quality container">
+        <h2>Delivery</h2>
+        <div class="quality-image">
+            <div class="quality-image-5">
+                <img src="https://img.freepik.com/free-vector/delivery-point-abstract-concept-illustration_335657-3937.jpg?size=626&ext=jpg&ga=GA1.2.1101872506.1692367417&semt=ais" alt="1">
+                <h3>Effortless Vehicle Care</h3>
+            </div>
+            <div class="quality-image-5">
+                <img src="https://img.freepik.com/premium-vector/order-delivery-tracking-using-mobile-device_7087-805.jpg?size=626&ext=jpg&ga=GA1.2.1101872506.1692367417&semt=ais" alt="2">
+                <h3>Convenient Vehicle Maintenance</h3>
+            </div>
+        </div>
+        <p> Get your bike or car serviced without leaving home with our doorstep service delivery. We bring the garage to you, ensuring your vehicle is in top shape, hassle-free.</p>
+    </div>
+    <div class="banner-2">
+        <div class="container">
+                
+        </div>
     </div>
     <div class="container ">
-        <h2 class="booking-heading">Service Details</h2>
+        <h2 class="booking-heading">About Us</h2>
         <div class="booking">
-        <div class="booking-image">
-            <img src="https://cdn-icons-png.flaticon.com/128/2880/2880841.png" alt="img">
-        </div>
-        <div class="booking-form">
-            <h2 class="add-title">Add service</h2>
-            <p class="add-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-			<div class="button-space">
-                <button  mat-accent-button class="button" routerLink="/addservice">Add</button>
+            
+            <youtube-player videoId="KIvC5wsoW2Y"></youtube-player>
+            <div class="booking-form">
+                <h2 class="add-title">Add service</h2>
+                <p class="add-content"> Elevate your experience with our additional services, including pickup/drop-off, storage, rentals, workshops, and more.</p>
+                <div class="button-space">
+                    <button mat-raised-button color="primary" class="button" routerLink="/addservice">Add</button>
+                </div>
             </div>
-        </div>
     </div>
+    </div>
+    <div class="container">
+        <h2 class="booking-heading">Why Us</h2>
+        <p class="about">Our skilled technicians have years of experience and are passionate about all things cycling.We use only high-quality, genuine parts to ensure the longevity and reliability of your bike.We understand that your time is valuable. We aim for quick and efficient service without compromising quality.Affordable rates for top-notch service that won't break the bank.</p>
     </div>
 </div>
